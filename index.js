@@ -24,8 +24,8 @@ app.use('/movies', movieRoutes)
 
 
 if(require.main === module){
-	app.listen(process.env.PORT || 3000, () => {
-	    console.log(`API is now online on port ${ process.env.PORT || 3000 }`)
+	app.listen(process.env.PORT || 4000, () => {
+	    console.log(`API is now online on port ${ process.env.PORT || 4000 }`)
 	});
 }
 
