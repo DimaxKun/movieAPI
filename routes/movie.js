@@ -5,9 +5,9 @@ const { verify, verifyAdmin } = require("../auth");
 const router = express.Router();
 
 
-router.get('/getMovies', verify, movieController.getMovies);
+router.get('/getMovies', movieController.getMovies);
 
-router.get('/getMovie/:id', verify, movieController.getMovie);
+router.get('/getMovie/:id', movieController.getMovie);
 
 router.post('/addMovie', verify, verifyAdmin, movieController.addMovie);
 
