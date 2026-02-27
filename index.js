@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const userRoutes = require('./routes/user');
 const movieRoutes = require('./routes/movie')
 
 const app = express();
 
+app.use(cors());
 
 mongoose.connect('mongodb+srv://admin:admin1234@alicluster.rzokgxg.mongodb.net/b598-s84?appName=AliCluster')
 
@@ -22,8 +24,8 @@ app.use('/movies', movieRoutes)
 
 
 if(require.main === module){
-	app.listen(process.env.PORT || 4000, () => {
-	    console.log(`API is now online on port ${ process.env.PORT || 4000 }`)
+	app.listen(process.env.PORT || 3000, () => {
+	    console.log(`API is now online on port ${ process.env.PORT || 3000 }`)
 	});
 }
 
